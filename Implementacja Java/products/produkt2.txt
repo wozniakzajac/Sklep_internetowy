@@ -1,0 +1,5 @@
+produkt2
+12.22
+
+true
+asddasd asdasd
