@@ -1,0 +1,12 @@
+xxx
+30.0
+
+true
+102
+opis
+xxx
+30.0
+
+true
+101
+opis

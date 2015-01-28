@@ -1,0 +1,6 @@
+test
+1000.0
+
+true
+3
+Opis
