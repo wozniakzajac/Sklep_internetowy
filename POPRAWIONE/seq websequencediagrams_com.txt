@@ -1,0 +1,53 @@
+Goœæ->+Interfejs: 1: Klikniêcie przycisku 'Rejestracja'
+Interfejs-->-Goœæ: 2: Wyœwietlenie formularza
+
+*****
+
+Goœæ->+Main: 3: Wprowadzenie nazwy u¿ytkownika
+Main->+Rejestracja: 3.1: nowy.setNazwaUzytkownika(string login)
+Rejestracja->Klient: 3.1.1: setNazwaUZytkownika()
+Rejestracja->Rejestracja: 3.1.2: czyZarejestrowany()
+
+alt Je¿eli nazwa zajêta
+    Rejestracja-->Main: 3.1.3: B³¹d: Nazwa u¿ytkownika jest zajêta
+else Je¿eli nazwa wolna
+    Rejestracja-->-Main: 3.1.4: Nazwa u¿ytkownika dostêpna
+end
+Main-->-Goœæ: 4: Wyœwietlenie informacji o dostêpnoœæ nazwy u¿ytkownika
+
+*****
+
+Goœæ->+Main: 5: Wprowadzenie has³a
+Main->+Rejestracja: 5.1: nowy.setHaslo(string haslo)
+Rejestracja->Klient: 5.1.1: setHaslo()
+Rejestracja->Rejestracja: 5.1.2: czyPoprawne()
+
+alt Je¿eli has³o niepoprawne
+    Rejestracja-->Main: 5.1.3: B³¹d: Wprowadzono niepoprawne has³o
+else Je¿eli has³o poprawne
+    Rejestracja-->-Main: 5.1.4: Has³o zaakceptowane
+end
+Main-->-Goœæ: 6: Wyœwietlenie informacji o poprawnoœci has³a
+
+*****
+
+Goœæ->+Main: 7: Wprowadzenie adresu email
+Main->+Rejestracja: 7.1: nowy.setEmail(string email)
+Rejestracja->Klient: 7.1.1: setEmail()
+Rejestracja->Rejestracja: 7.1.2: czyZajety()
+
+alt Je¿eli email zajêty
+    Rejestracja-->Main: 7.1.3: B³¹d: Podany adres email jest powi¹zany z istniej¹cym kontem
+else Je¿eli email wolny
+    Rejestracja-->-Main: 7.1.4: Email zaakceptowany
+end
+Main-->-Goœæ: 8: Wyœwietlenie informacji o poprawnoœci adresu email
+
+*****
+
+Goœæ->+Interfejs: 9: Klikniêcie przycisku 'Zarejestruj'
+Interfejs->+Rejestracja: 9.1: nowy.stworz()
+Rejestracja->+Klient: 9.1.1: stworz()
+Klient-->-Rejestracja: 9.1.2: Potwierdzenie stworzenia
+Rejestracja-->-Interfejs: 9.1.3: Potwierzenie()
+Interfejs-->-Goœæ: 10: Wyœwietlenie informacji o utworzeniu nowego konta
