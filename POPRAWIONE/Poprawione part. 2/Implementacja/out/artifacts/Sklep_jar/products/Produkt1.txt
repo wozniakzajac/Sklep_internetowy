@@ -1,0 +1,6 @@
+produkt1
+12.0
+
+true
+121
+Opis

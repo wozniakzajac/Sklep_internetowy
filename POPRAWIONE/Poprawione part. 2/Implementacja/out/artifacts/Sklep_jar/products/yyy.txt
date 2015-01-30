@@ -1,0 +1,6 @@
+yyy
+20.0
+
+true
+5
+opis
